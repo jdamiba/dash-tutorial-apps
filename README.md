@@ -17,12 +17,13 @@ This repository hosts applications that are designed to teach you about Dash, a 
         - a set of HTML UI components
     - `plotly`
         - the [`plotly.py`](https://plot.ly/python/) graphing library (includes [`plotly.express`](https://plot.ly/python/plotly-express/) built-in)
-    - This can be achieved using `pip`, `conda` or other Python package managers.
+    - This can be achieved using `pip` or other Python package managers. For example:
+        - `$ pip install dash dash_core_components dash_html_components plotly`
 
 3. Clone this repository
-    - `git clone git@github.com:jdamiba/dash-tutorial-apps.git`
+    - `$ git clone git@github.com:jdamiba/dash-tutorial-apps.git`
 
 4. Open a terminal instance and cd into the folder with the app you want to run
-    - `cd dash-tutorial-apps/folder-name`
+    - `$ cd dash-tutorial-apps/folder-name`
 
 5. Run `$ python app.py` 
