@@ -9,14 +9,14 @@ This repository hosts applications that are designed to teach you about Dash, a 
     - [pip](https://pip.pypa.io/en/stable/installing/) and [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) are popular Python package managers 
 
 2. In the Python environment of your choice, install the following packages:
-    - `dash`
+    - [`dash`](https://dash.plot.ly/)
         - the main package
-    - `dash_core_components`
+    - [`dash_core_components`](https://dash.plot.ly/dash-core-components)
         - a set of interactive UI components
-    - `dash_html_components`
+    - [`dash_html_components`](https://dash.plot.ly/dash-html-components)
         - a set of HTML UI components
     - `plotly`
-        - the `plotly.py` graphing library (includes `plotly.express` built-in)
+        - the [`plotly.py`](https://plot.ly/python/) graphing library (includes [`plotly.express`](https://plot.ly/python/plotly-express/) built-in)
     - This can be achieved using `pip`, `conda` or other Python package managers.
 
 3. Clone this repository
@@ -24,5 +24,5 @@ This repository hosts applications that are designed to teach you about Dash, a 
 
 4. Open a terminal instance and cd into the folder with the app you want to run
     - `cd dash-tutorial-apps/folder-name`
-    
+
 5. Run `$ python app.py` 
