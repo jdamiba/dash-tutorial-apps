@@ -18,18 +18,16 @@ Web servers parse incoming HTTP requests from different web browsers and respond
     - Does the requested URL exist?
         - Web browsers often request URLs that do not exist on the web server. This can be because a URL is misspelled or because a resource has moved from one URL to another.
     - Does the web browser have access to the files stored at the URL?
-        - The request might come from a blacklisted IP address belonging to a hacking group.
-4. If the request is valid, Google's web server responds with HTML, CSS, and JavaScript files that the web browser uses to create the Google home page. 
+        - The request might come from a blacklisted IP address.
+4. If the request is valid, Google's web server responds with HTML, CSS, and JavaScript files that the web browser will use to create the Google home page. 
 5. The response is routed back to the web browser
-6. The web browser parses the HTML, CSS, and JavaScript files it received in order to make a web page. the 
-
-After a user types a query and hits Search in their web browser, the web browser sends another request to the Google web server. 
-
-The second request contains the the search query in the URL, which the Google web server will use to respond to that request with the Google search results page.
+6. The web browser parses the HTML, CSS, and JavaScript files it and makes the Google homepage.
+7. After a user types a query and hits Search in their web browser, the web browser sends another request to the Google web server. 
+    - The second request also includes the search query in the URL that is requested, which the Google web server will use to respond to that request with HTML, CSS, and JavaScript files that the web browser uses to create the Google search results page.
 
 ## How Can You Make Web Servers?
 
-You can make web servers using Dash, an open-source framework for making web servers with Python.
+You can make web servers using Dash, an open-source framework for making web servers with Python. With Dash, you write Python programs known as Dash apps that are web servers capable of interacting with web browsers.
 
 1. To make Dash apps, you will use the Python programming language. This requires installing Python on your computer if you don't already have it. You also need a way of installing Python packages in your Python environment and a code editor. 
     - [official downloading python page](https://wiki.python.org/moin/BeginnersGuide/Download)
@@ -44,4 +42,4 @@ You can make web servers using Dash, an open-source framework for making web ser
     - You can do this achieved using `pip` or other Python package managers in your terminal. For example:
         - `$ pip install dash dash_core_components dash_html_components plotly`
 
-4. Read the README for the first app. 
+4. Go to /hello-world to get started making Dash apps. 
