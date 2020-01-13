@@ -1,28 +1,41 @@
 # Dash Hello World
 
-## Line 4
-Dash apps are web servers built in Python. 
+## Your First Dash App
 
-When you define your app's `layout`, you are telling the web server how to respond to web clients that make HTTP requests to it. 
+1. Create a folder called `hello-world` and make it your working directory.
+    - `$ mkdir hello-word && cd hello-world`
+2. Create a file called `app.py`.
+    - `$ touch app.py`
+3. Fill the contents of `app.py` with the following Python code:
+```python
+import dash
+import dash_html_components as html
 
-By default, Dash assumes that you want the `layout` of your app to define how the web server should respond to an incoming HTTP GET request to the root URL where the web server lives. 
+app = dash.Dash(__name__)
+                
+app.layout = html.H1(children="Hello, world!")
 
-In your development environment, that root URL is going to be http://127.0.0.1:8050/ because Dash exposes a web server on port 8050 locally. 
+if __name__ == '__main__':
+    app.run_server(debug=True)
+```
+4. Run the application in your terminal.
+    - `$ python app.py`
+5. Go to http://127.0.0.1:8050/ with a web browser.
+6. If you have trouble creating your own file, try running `$ python app.py` in this directory.
 
-In other words, whatever you define as the app's `layout` will be sent as a response to web browsers that navigate to the URL http://127.0.0.1:8050/ on your computer. 
+## What Just Happened?
 
-When you deploy your Dash app (for example to Heroku), the web server will do the same thing by default- use the `layout` you have defined to respond to incoming requests to its root URL. However, when you deploy, the root URL is going to be whatever your domain name is (ie https://www.example-url-doesnt-exist.herokuapps.com). 
+The code in `app.py` does two things.
 
-This is a key concept to understand while developing Dash apps. 
+First, it initializes a Dash app that will persist for as long as the program is running. You can stop the Dash app by hitting `Control + C` in the same terminal ran `$ python app.py`.
 
-The `layout` of an application defines how the application responds to incoming HTTP GET requests to the root directory of the environment where the web server is running. 
+Second, it defines the `layout` of the Dash app. This is used behind the scenes to build the HTML, CSS, and JavaScript files that are sent to web browsers when they make a request. 
 
-That could be your computer's `localhost` when you're developing an application locally, or a virtual machine run by your web hosting company when you deploy your application.
+In this case we're using an open source Dash component from the `dash_html_components` library, `html.H1()`, to define the `layout`. As you might have guessed from its name, this Dash component renders an HTML h1 tag. Other components in the `dash_html_components` library render the other HTML tags.
 
-# Line 6 
+You can use open-source Dash components like `html.H1()` to build layouts for Dash apps and you can make your own Dash components.
 
-The fastest way to define a `layout` for your app is to use the built-in `dash_html_components` library to define the HTML structure. 
+Go to /dash-html-nesting to learn how to build more complex layouts by nesting Dash components.
 
-In this example, we are using the `html.H1()` function. Any text you pass to this function gets rendered inside an `<h1>` tag.
 
-To see a list of all the 
+
